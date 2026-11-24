@@ -27,5 +27,5 @@ order: 4
 ## 연락
 
 - GitHub: [enloa-0](https://github.com/enloa-0)
-- Discord: `@enloa`
+- Discord: enloa
 - Email: [0920psm@gmail.com](mailto:0920psm@gmail.com)
