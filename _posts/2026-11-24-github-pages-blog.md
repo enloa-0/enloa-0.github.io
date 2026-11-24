@@ -1,6 +1,6 @@
 ---
 title: GitHub Pages로 나만의 보안 블로그 만들기
-date: 2026-11-24 18:30:00 +0900
+date: 2026-11-24 18:00:00 +0900
 categories: [개발]
 tags: [github-pages, jekyll, chirpy, blog]
 ---
