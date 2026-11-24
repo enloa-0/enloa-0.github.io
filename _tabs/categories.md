@@ -17,7 +17,7 @@ order: 1
     {% if posts and posts.size > 0 %}
     <ul class="sticker-posts">
       {% for p in posts %}
-      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a> <small>{{ p.date | date: "%Y.%m.%d" }}</small></li>
+      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a><span class="leader"></span><small>{{ p.date | date: "%Y.%m.%d" }}</small></li>
       {% endfor %}
     </ul>
     {% else %}
