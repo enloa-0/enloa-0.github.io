@@ -233,4 +233,50 @@
   #search-results, #search-input {
     font-family: 'Gaegu', 'Nanum Pen Script', cursive !important;
   }
+  /* 검색창 비밀 링크 카드 */
+  .secret-card {
+    margin: 0.5rem 0 1.5rem;
+    padding: 1.2rem;
+    max-width: 380px;
+    background: #181818;
+    border: 3px solid var(--yellow);
+    border-radius: 14px 4px 16px 6px;
+    box-shadow: 5px 5px 0 #000;
+    transform: rotate(-1deg);
+    text-align: center;
+  }
+  .secret-head {
+    font-family: 'Gaegu', cursive;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--yellow);
+    margin-bottom: 0.8rem;
+  }
+  .secret-qr-wrap {
+    display: inline-block;
+    background: #fff;
+    border-radius: 12px;
+    padding: 0.4rem 0.4rem 0.8rem;
+  }
+  .secret-qr { display: block; max-width: 100%; height: auto !important; }
+  .secret-name {
+    font-family: 'Gaegu', cursive;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+    color: #2a9de6;
+  }
+  .secret-btn {
+    display: inline-block;
+    margin-top: 0.9rem;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    background: var(--yellow);
+    color: #111 !important;
+    font-family: 'Gaegu', cursive;
+    font-weight: 700;
+    text-decoration: none !important;
+  }
+  .secret-btn:hover { filter: brightness(1.1); }
 </style>
+<script defer src="/assets/js/secret-search.js"></script>
