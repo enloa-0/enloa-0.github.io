@@ -171,4 +171,24 @@
   .sticker-posts { padding-left: 1.1rem; margin: 0; }
   .sticker-posts small { opacity: 0.6; }
   .sticker-empty { margin: 0; opacity: 0.6; font-style: italic; }
+  /* 사이드바 가독성 보정 */
+  #avatar:empty { display: none !important; }
+  #sidebar .profile-wrapper { margin-top: 2.5rem; }
+  #sidebar .site-title {
+    font-size: 1.9rem !important;
+    word-break: keep-all;
+    white-space: normal;
+  }
+  #sidebar .site-subtitle { word-break: keep-all; }
+  #sidebar .nav-link span {
+    font-family: 'Nanum Pen Script', 'Permanent Marker', cursive !important;
+    font-size: 1.55rem !important;
+    letter-spacing: 0.04em !important;
+    text-transform: none !important;
+  }
+  #sidebar .nav-link { display: flex; align-items: center; }
+  #topbar #breadcrumb, #topbar-title {
+    font-family: 'Nanum Pen Script', cursive !important;
+    font-size: 1.5rem !important;
+  }
 </style>
