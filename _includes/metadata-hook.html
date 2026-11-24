@@ -1,7 +1,7 @@
 <!-- 그래피티/낙서 스타일 커스텀 (Chirpy metadata-hook) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nanum+Pen+Script&family=Caveat:wght@400..700&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nanum+Pen+Script&family=Tilt+Neon&display=swap" rel="stylesheet">
 <style>
   :root, html[data-mode] {
     --spray-pink: #ff3ea5;
@@ -42,9 +42,9 @@
 
   /* 제목: 마커 + 펜 손글씨 */
   h1, h2, h3, h4, h5, h6, .card-title, .post-title, .panel-heading, #access-lastmod h2 {
-    font-family: 'Caveat', 'Nanum Pen Script', cursive !important;
+    font-family: 'Tilt Neon', 'Nanum Pen Script', cursive !important;
     letter-spacing: 0.01em;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
     color: var(--heading-color);
   }
   h1, .post-title { font-size: 2.6rem !important; }
@@ -64,11 +64,11 @@
     border-right: 3px dashed rgba(255, 255, 255, 0.08);
   }
   #sidebar .site-title {
-    font-family: 'Rubik Spray Paint', 'Nanum Pen Script', cursive !important;
+    font-family: 'Tilt Neon', 'Nanum Pen Script', cursive !important;
     font-size: 2.1rem !important;
     line-height: 1.15;
     color: var(--spray-pink) !important;
-    text-shadow: 0 0 6px rgba(255, 62, 165, 0.6), 3px 3px 0 #000;
+    text-shadow: 0 0 2px #fff, 0 0 8px var(--spray-pink), 0 0 18px rgba(255, 62, 165, 0.7);
     transform: rotate(-4deg);
     display: inline-block;
   }
@@ -80,7 +80,7 @@
     transform: rotate(2deg);
   }
   #sidebar .nav-link {
-    font-family: 'Caveat', 'Nanum Pen Script', cursive !important;
+    font-family: 'Tilt Neon', 'Nanum Pen Script', cursive !important;
     font-size: 1.05rem;
   }
   #sidebar .nav-item.active .nav-link,
@@ -182,7 +182,7 @@
   }
   #sidebar .site-subtitle { word-break: keep-all; }
   #sidebar .nav-link span {
-    font-family: 'Nanum Pen Script', 'Caveat', cursive !important;
+    font-family: 'Nanum Pen Script', 'Tilt Neon', cursive !important;
     font-size: 1.55rem !important;
     letter-spacing: 0.04em !important;
     text-transform: none !important;
@@ -191,5 +191,19 @@
   #topbar #breadcrumb, #topbar-title {
     font-family: 'Nanum Pen Script', cursive !important;
     font-size: 1.5rem !important;
+  }
+  /* 네온사인 효과 */
+  h1, h2, h3, .card-title, .post-title {
+    text-shadow: 0 0 1px #fff, 0 0 6px rgba(45, 226, 230, 0.85), 0 0 14px rgba(45, 226, 230, 0.45);
+  }
+  .content h3 {
+    text-shadow: 0 0 1px #fff, 0 0 6px rgba(198, 255, 61, 0.8), 0 0 14px rgba(198, 255, 61, 0.4);
+  }
+  .content .tag-sticker h2.sticker-title {
+    text-shadow: 0 0 1px #fff, 0 0 6px var(--sticker-color), 0 0 14px var(--sticker-color);
+  }
+  #sidebar .nav-item.active .nav-link span,
+  #sidebar .nav-link:hover span {
+    text-shadow: 0 0 1px #fff, 0 0 8px var(--spray-yellow);
   }
 </style>
