@@ -278,6 +278,8 @@
     text-decoration: none !important;
   }
   .secret-btn:hover { filter: brightness(1.1); }
+  /* 비밀 카드가 뜨면 "검색 결과가 없습니다" 문구 숨김 */
+  #search-results:has(.secret-card) > p { display: none !important; }
   /* 비밀 카드 글씨 통일 (본문 Gaegu), 버튼 밑줄 제거 */
   #search-results .secret-card,
   #search-results .secret-card * {
