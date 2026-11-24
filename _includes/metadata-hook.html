@@ -1,0 +1,174 @@
+<!-- 그래피티/낙서 스타일 커스텀 (Chirpy metadata-hook) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nanum+Pen+Script&family=Permanent+Marker&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+<style>
+  :root, html[data-mode] {
+    --spray-pink: #ff3ea5;
+    --spray-lime: #c6ff3d;
+    --spray-cyan: #2de2e6;
+    --spray-yellow: #ffd23f;
+    --wall: #17171c;
+    --main-bg: var(--wall) !important;
+    --topbar-bg: rgba(23, 23, 28, 0.92) !important;
+    --sidebar-bg: #101014 !important;
+    --card-bg: #202028 !important;
+    --text-color: #e8e6e3 !important;
+    --heading-color: #ffffff !important;
+    --link-color: var(--spray-cyan) !important;
+    --link-underline-color: var(--spray-cyan) !important;
+  }
+
+  /* 모드 전환 버튼 숨김: 그래피티 테마 고정 */
+  #mode-toggle { display: none !important; }
+
+  /* 벽돌 벽 느낌의 배경 */
+  body {
+    background-color: var(--wall);
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(255, 62, 165, 0.10) 0 6px, transparent 7px),
+      radial-gradient(circle at 78% 64%, rgba(198, 255, 61, 0.08) 0 9px, transparent 10px),
+      radial-gradient(circle at 46% 88%, rgba(45, 226, 230, 0.08) 0 5px, transparent 6px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 38px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 76px);
+    background-attachment: fixed;
+  }
+
+  /* 본문: 읽기 쉬운 손글씨 */
+  body, .content, .card-text, #post-list, #toc, .post-meta, #breadcrumb {
+    font-family: 'Gaegu', 'Nanum Pen Script', cursive, sans-serif !important;
+    font-size: 1.12rem;
+  }
+
+  /* 제목: 마커 + 펜 손글씨 */
+  h1, h2, h3, h4, h5, h6, .card-title, .post-title, .panel-heading, #access-lastmod h2 {
+    font-family: 'Permanent Marker', 'Nanum Pen Script', cursive !important;
+    letter-spacing: 0.02em;
+    color: var(--heading-color);
+  }
+  h1, .post-title { font-size: 2.6rem !important; }
+
+  /* 코드는 고정폭 유지 */
+  code, pre, kbd, samp, .highlight, .highlight * {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* 사이드바: 스프레이 태그 */
+  #sidebar {
+    background-image:
+      radial-gradient(circle at 20% 85%, rgba(255, 62, 165, 0.18) 0 14px, transparent 15px),
+      radial-gradient(circle at 70% 92%, rgba(255, 62, 165, 0.12) 0 4px, transparent 5px),
+      radial-gradient(circle at 85% 10%, rgba(198, 255, 61, 0.14) 0 10px, transparent 11px);
+    border-right: 3px dashed rgba(255, 255, 255, 0.08);
+  }
+  #sidebar .site-title {
+    font-family: 'Rubik Spray Paint', 'Nanum Pen Script', cursive !important;
+    font-size: 2.1rem !important;
+    line-height: 1.15;
+    color: var(--spray-pink) !important;
+    text-shadow: 0 0 6px rgba(255, 62, 165, 0.6), 3px 3px 0 #000;
+    transform: rotate(-4deg);
+    display: inline-block;
+  }
+  #sidebar .site-subtitle {
+    font-family: 'Nanum Pen Script', cursive !important;
+    font-style: normal !important;
+    font-size: 1.25rem !important;
+    color: var(--spray-lime) !important;
+    transform: rotate(2deg);
+  }
+  #sidebar .nav-link {
+    font-family: 'Permanent Marker', 'Nanum Pen Script', cursive !important;
+    font-size: 1.05rem;
+  }
+  #sidebar .nav-item.active .nav-link,
+  #sidebar .nav-link:hover {
+    color: var(--spray-yellow) !important;
+    text-shadow: 0 0 8px rgba(255, 210, 63, 0.55);
+  }
+
+  /* 글 목록 카드: 벽에 붙인 종이 + 테이프 */
+  #post-list .card-wrapper {
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 4px !important;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.45);
+    transform: rotate(-0.6deg);
+    transition: transform 0.15s ease;
+    overflow: visible !important;
+  }
+  #post-list .card-wrapper:nth-child(even) { transform: rotate(0.6deg); }
+  #post-list .card-wrapper:hover { transform: rotate(0deg) scale(1.01); }
+  #post-list .card-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -10px; left: 50%;
+    width: 90px; height: 22px;
+    margin-left: -45px;
+    background: rgba(198, 255, 61, 0.55);
+    transform: rotate(-3deg);
+    z-index: 2;
+  }
+
+  /* 본문 소제목: 형광펜 밑줄 */
+  .content h2 {
+    display: inline-block;
+    padding: 0 0.3em;
+    background: linear-gradient(transparent 58%, rgba(255, 62, 165, 0.45) 58%);
+  }
+  .content h3 { color: var(--spray-lime) !important; }
+
+  /* 링크: 손으로 그은 물결 밑줄 */
+  .content a:not(.img-link) {
+    text-decoration: underline wavy var(--spray-cyan) !important;
+    text-underline-offset: 4px;
+  }
+
+  /* 카테고리 페이지: 스티커 벽 */
+  .tag-wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.6rem;
+    margin-top: 1.5rem;
+  }
+  .tag-sticker {
+    position: relative;
+    padding: 1.1rem 1.2rem 1rem;
+    background: #202028;
+    border: 3px solid var(--sticker-color, var(--spray-pink));
+    border-radius: 14px 4px 16px 6px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+    transform: rotate(var(--tilt, -1deg));
+  }
+  .tag-sticker:hover { transform: rotate(0deg) scale(1.02); }
+  .sticker-1 { --sticker-color: var(--spray-pink);   --tilt: -1.5deg; }
+  .sticker-2 { --sticker-color: var(--spray-lime);   --tilt: 1.2deg; }
+  .sticker-3 { --sticker-color: var(--spray-cyan);   --tilt: -0.8deg; }
+  .sticker-4 { --sticker-color: var(--spray-yellow); --tilt: 1.6deg; }
+  .sticker-5 { --sticker-color: var(--spray-lime);   --tilt: -1.2deg; }
+  .sticker-6 { --sticker-color: var(--spray-pink);   --tilt: 0.9deg; }
+  .content .tag-sticker h2.sticker-title {
+    background: none;
+    padding: 0;
+    margin: 0 0 0.3rem;
+    font-size: 1.5rem !important;
+    color: var(--sticker-color) !important;
+  }
+  .sticker-count {
+    display: inline-block;
+    min-width: 1.8em;
+    margin-left: 0.3em;
+    padding: 0 0.4em;
+    border-radius: 999px;
+    background: var(--sticker-color);
+    color: #111;
+    font-size: 1rem;
+    text-align: center;
+    transform: rotate(8deg);
+  }
+  .sticker-desc { margin-bottom: 0.5rem; opacity: 0.85; }
+  .sticker-posts { padding-left: 1.1rem; margin: 0; }
+  .sticker-posts small { opacity: 0.6; }
+  .sticker-empty { margin: 0; opacity: 0.6; font-style: italic; }
+</style>
