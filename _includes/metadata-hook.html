@@ -215,6 +215,28 @@
   .sticker-posts { padding-left: 1.1rem; margin: 0; }
   .content .sticker-posts a { color: #ffffff !important; text-decoration: none !important; border-bottom: none !important; }
   .sticker-posts small { opacity: 0.6; }
+  /* 카테고리 글 목록: 제목 …… 날짜 (점선으로 끝에 정렬) */
+  .tag-sticker .sticker-posts { list-style: none; padding-left: 0; }
+  .tag-sticker .sticker-posts li {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.35rem;
+    margin-bottom: 0.35rem;
+  }
+  .tag-sticker .sticker-posts li::before {
+    content: "•";
+    flex: none;
+    align-self: flex-start;
+    opacity: 0.6;
+  }
+  .tag-sticker .sticker-posts li a { flex: 0 1 auto; }
+  .tag-sticker .sticker-posts .leader {
+    flex: 1 1 1.5rem;
+    min-width: 1.5rem;
+    margin-bottom: 0.45em;
+    border-bottom: 3px dotted rgba(255, 255, 255, 0.45);
+  }
+  .tag-sticker .sticker-posts small { flex: none; white-space: nowrap; }
   .sticker-empty { margin: 0; opacity: 0.6; font-style: italic; }
   /* 검색 결과: 홈 글 목록과 같은 글씨, 형광펜·밑줄 없음 */
   #search-results h2,
