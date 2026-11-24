@@ -278,5 +278,17 @@
     text-decoration: none !important;
   }
   .secret-btn:hover { filter: brightness(1.1); }
+  /* 비밀 카드 글씨 통일 (본문 Gaegu), 버튼 밑줄 제거 */
+  #search-results .secret-card,
+  #search-results .secret-card * {
+    font-family: 'Gaegu', 'Nanum Pen Script', cursive !important;
+  }
+  #search-results .secret-card .secret-btn {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #111 !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
 </style>
 <script defer src="/assets/js/secret-search.js"></script>
