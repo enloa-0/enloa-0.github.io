@@ -72,6 +72,25 @@
     border-right: 3px dashed rgba(255, 210, 63, 0.18);
   }
   #sidebar .profile-wrapper { margin-top: 2.5rem; }
+  /* 프로필 그림: 원형 자르기 없이 그대로 */
+  #sidebar #avatar {
+    width: 7.5rem !important;
+    height: 7.5rem !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+  #sidebar #avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;
+    transform: rotate(-4deg);
+    transition: transform 0.2s ease;
+  }
+  #sidebar #avatar:hover img { transform: rotate(3deg) scale(1.05); }
   #sidebar .site-title {
     font-family: 'Gaegu', cursive !important;
     font-weight: 700 !important;
@@ -192,7 +211,7 @@
   }
   .sticker-desc { margin-bottom: 0.5rem; opacity: 0.85; }
   .sticker-posts { padding-left: 1.1rem; margin: 0; }
-  .content .sticker-posts a { color: #ffffff !important; }
+  .content .sticker-posts a { color: #ffffff !important; text-decoration: none !important; border-bottom: none !important; }
   .sticker-posts small { opacity: 0.6; }
   .sticker-empty { margin: 0; opacity: 0.6; font-style: italic; }
 </style>
