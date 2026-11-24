@@ -74,8 +74,8 @@
   #sidebar .profile-wrapper { margin-top: 2.5rem; }
   /* 프로필 그림: 원형 자르기 없이 그대로 */
   #sidebar #avatar {
-    width: 7.5rem !important;
-    height: 7.5rem !important;
+    width: 8.5rem !important;
+    height: 8.5rem !important;
     border: none !important;
     border-radius: 0 !important;
     background: transparent !important;
@@ -89,6 +89,8 @@
     border-radius: 0 !important;
     transform: rotate(-4deg);
     transition: transform 0.2s ease;
+    /* 검은 배경에서도 보이도록 흰 스티커 테두리 */
+    filter: drop-shadow(1.5px 0 0 #fff) drop-shadow(-1.5px 0 0 #fff) drop-shadow(0 1.5px 0 #fff) drop-shadow(0 -1.5px 0 #fff) drop-shadow(3px 4px 0 rgba(255, 210, 63, 0.55));
   }
   #sidebar #avatar:hover img { transform: rotate(3deg) scale(1.05); }
   #sidebar .site-title {
