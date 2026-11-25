@@ -2,7 +2,7 @@
 title: AI 에이전트는 어떻게 안전해질까? 프롬프트 인젝션에서 격리·권한 통제까지 논문 5편 흐름 정리
 date: 2026-11-25 03:00:00 +0900
 categories: [논문/컨퍼런스]
-tags: [ai-agent, prompt-injection, isolation, paper, trend]
+tags: [ai-agent, prompt-injection, isolation, paper, trend, HSKF 3기]
 ---
 
 > **한 줄 요약:** AI 에이전트 보안은 "속지 않게 만들기"에서 "속아도 피해가 커지지 않게 만들기"로 옮겨 가고 있다.
