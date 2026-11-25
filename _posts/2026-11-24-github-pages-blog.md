@@ -2,7 +2,7 @@
 title: GitHub Pages로 나만의 보안 블로그 만들기
 date: 2026-11-24 18:00:00 +0900
 categories: [개발]
-tags: [github-pages, jekyll, chirpy, blog]
+tags: [github-pages, jekyll, chirpy, blog, HSKF 3기]
 ---
 
 앞으로 공부하고 활동한 내용을 꾸준히 기록하기 위해 GitHub Pages로 개인 블로그를 만들었다.
