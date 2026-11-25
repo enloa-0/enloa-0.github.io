@@ -1,7 +1,7 @@
 <!-- 낙서/그래피티 스타일 커스텀 (Chirpy metadata-hook) : 검정 + 노랑 + 하늘색 포인트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nanum+Pen+Script&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&family=Nanum+Pen+Script&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 <style>
   :root, html[data-mode] {
     --yellow: #ffd23f;
@@ -318,5 +318,14 @@
   }
   /* 굵게 표시하던 강조는 노란색으로 구분 */
   .content strong, .content b { color: var(--yellow); }
+  /* ===== 본문 가독성: 긴 글은 읽기 쉬운 둥근 고딕(Gowun Dodum), 제목·메뉴는 손글씨(Gaegu) 유지 ===== */
+  .content, .content p, .content li, .content td, .content th,
+  .content strong, .content b, .content blockquote,
+  .card-text, .sticker-desc, .sticker-empty, #search-results p {
+    font-family: 'Gowun Dodum', 'Noto Sans KR', sans-serif !important;
+    font-weight: 400 !important;
+  }
+  .content { font-size: 1rem !important; line-height: 1.85 !important; letter-spacing: -0.005em; }
+  .card-text { font-size: 0.95rem !important; line-height: 1.7 !important; }
 </style>
 <script defer src="/assets/js/secret-search.js"></script>
