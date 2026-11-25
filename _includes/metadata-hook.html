@@ -3,6 +3,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&family=Nanum+Pen+Script&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 <style>
+  /* 나눔손글씨 바른히피 (NAVER, OFL) */
+  @font-face {
+    font-family: 'BareHippie';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_01@1.0/Bareun_hipi.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+  }
   :root, html[data-mode] {
     --yellow: #ffd23f;
     --yellow-soft: rgba(255, 210, 63, 0.35);
@@ -35,7 +42,7 @@
 
   /* 본문: 손글씨 */
   body, .content, .card-text, #post-list, #toc, .post-meta, #breadcrumb {
-    font-family: 'Gaegu', 'Nanum Pen Script', cursive, sans-serif !important;
+    font-family: 'BareHippie', 'Nanum Pen Script', cursive, sans-serif !important;
     font-size: 1.12rem;
   }
 
@@ -51,7 +58,7 @@
 
   /* 홈 글 목록 제목: 본문과 같은 Gaegu */
   #post-list .card-title {
-    font-family: 'Gaegu', 'Nanum Pen Script', cursive !important;
+    font-family: 'BareHippie', 'Nanum Pen Script', cursive !important;
     font-weight: 700 !important;
     font-size: 1.9rem !important;
   }
@@ -94,7 +101,7 @@
   }
   #sidebar #avatar:hover img { transform: rotate(3deg) scale(1.05); }
   #sidebar .site-title {
-    font-family: 'Gaegu', cursive !important;
+    font-family: 'BareHippie', cursive !important;
     font-weight: 700 !important;
     font-size: 1.9rem !important;
     line-height: 1.1;
@@ -107,7 +114,7 @@
     display: inline-block;
   }
   #sidebar .site-subtitle {
-    font-family: 'Gaegu', cursive !important;
+    font-family: 'BareHippie', cursive !important;
     font-style: normal !important;
     font-size: 1.05rem !important;
     color: var(--yellow) !important;
@@ -229,7 +236,7 @@
   /* 검색 결과: 홈 글 목록과 같은 글씨, 형광펜·밑줄 없음 */
   #search-results h2,
   #search-results h2 a {
-    font-family: 'Gaegu', 'Nanum Pen Script', cursive !important;
+    font-family: 'BareHippie', 'Nanum Pen Script', cursive !important;
     font-weight: 700 !important;
     font-size: 1.6rem !important;
     color: #ffffff !important;
@@ -241,7 +248,7 @@
   }
   #search-results h2 a:hover { color: var(--yellow) !important; }
   #search-results, #search-input {
-    font-family: 'Gaegu', 'Nanum Pen Script', cursive !important;
+    font-family: 'BareHippie', 'Nanum Pen Script', cursive !important;
   }
   /* 검색창 비밀 링크 카드 */
   .secret-card {
@@ -256,7 +263,7 @@
     text-align: center;
   }
   .secret-head {
-    font-family: 'Gaegu', cursive;
+    font-family: 'BareHippie', cursive;
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--yellow);
@@ -270,7 +277,7 @@
   }
   .secret-qr { display: block; max-width: 100%; height: auto !important; }
   .secret-name {
-    font-family: 'Gaegu', cursive;
+    font-family: 'BareHippie', cursive;
     font-weight: 700;
     font-size: 1.4rem;
     letter-spacing: 0.08em;
@@ -283,7 +290,7 @@
     border-radius: 999px;
     background: var(--yellow);
     color: #111 !important;
-    font-family: 'Gaegu', cursive;
+    font-family: 'BareHippie', cursive;
     font-weight: 700;
     text-decoration: none !important;
   }
@@ -293,7 +300,7 @@
   /* 비밀 카드 글씨 통일 (본문 Gaegu), 버튼 밑줄 제거 */
   #search-results .secret-card,
   #search-results .secret-card * {
-    font-family: 'Gaegu', 'Nanum Pen Script', cursive !important;
+    font-family: 'BareHippie', 'Nanum Pen Script', cursive !important;
   }
   #search-results .secret-card .secret-btn {
     font-size: 1.25rem !important;
@@ -312,7 +319,7 @@
   #search-results .secret-card, #search-results .secret-card *,
   .secret-head, .secret-name, .secret-btn, #search-results .secret-card .secret-btn,
   strong, b, th {
-    font-family: 'Gaegu', 'Nanum Pen Script', cursive !important;
+    font-family: 'BareHippie', 'Nanum Pen Script', cursive !important;
     font-weight: 400 !important;
     -webkit-text-stroke: 0 !important;
   }
@@ -322,10 +329,10 @@
   .content, .content p, .content li, .content td, .content th,
   .content strong, .content b, .content blockquote,
   .card-text, .sticker-desc, .sticker-empty, #search-results p {
-    font-family: 'Gowun Dodum', 'Noto Sans KR', sans-serif !important;
+    font-family: 'BareHippie', 'Noto Sans KR', sans-serif !important;
     font-weight: 400 !important;
   }
-  .content { font-size: 1rem !important; line-height: 1.85 !important; letter-spacing: -0.005em; }
-  .card-text { font-size: 0.95rem !important; line-height: 1.7 !important; }
+  .content { font-size: 1.15rem !important; line-height: 1.85 !important; letter-spacing: -0.005em; }
+  .card-text { font-size: 1.05rem !important; line-height: 1.7 !important; }
 </style>
 <script defer src="/assets/js/secret-search.js"></script>
