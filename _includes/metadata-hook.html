@@ -302,5 +302,21 @@
     text-decoration: none !important;
     border-bottom: none !important;
   }
+  /* ===== 굵은 글씨 없애기: 모든 글자를 본문과 같은 Gaegu 보통 굵기로 ===== */
+  body, h1, h2, h3, h4, h5, h6,
+  .card-title, .post-title, .panel-heading,
+  #sidebar .site-title, #sidebar .site-subtitle, #sidebar .nav-link, #sidebar .nav-link span,
+  #topbar #breadcrumb, #topbar-title,
+  #post-list .card-title, #search-results, #search-results h2, #search-results h2 a, #search-input,
+  .tag-sticker .sticker-title, .sticker-count,
+  #search-results .secret-card, #search-results .secret-card *,
+  .secret-head, .secret-name, .secret-btn, #search-results .secret-card .secret-btn,
+  strong, b, th {
+    font-family: 'Gaegu', 'Nanum Pen Script', cursive !important;
+    font-weight: 400 !important;
+    -webkit-text-stroke: 0 !important;
+  }
+  /* 굵게 표시하던 강조는 노란색으로 구분 */
+  .content strong, .content b { color: var(--yellow); }
 </style>
 <script defer src="/assets/js/secret-search.js"></script>
