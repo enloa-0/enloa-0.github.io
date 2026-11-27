@@ -15,11 +15,11 @@ order: 3
 .arch-date { flex: 0 0 3.2rem; text-align: right; color: var(--yellow, #ffd23f); font-size: 1.1rem; }
 .arch-posts { list-style: none; margin: 0; padding: 0; flex: 1; }
 .arch-posts li { padding: 0.1rem 0; }
-.arch-posts a { color: #fff !important; text-decoration: none !important; border-bottom: none !important; background: none !important; }
-.arch-posts a:hover { color: var(--sky, #2de2e6) !important; }
+#archives-page .arch .arch-posts a:not(.img-link) { color: #fff !important; text-decoration: none !important; border-bottom: none !important; background: none !important; }
+#archives-page .arch .arch-posts a:not(.img-link):hover { color: var(--sky, #2de2e6) !important; }
 </style>
 
-<div class="arch">
+<div id="archives-page"><div class="arch">
 {%- assign by_year = site.posts | group_by_exp: "p", "p.date | date: '%Y'" -%}
 {%- for year in by_year -%}
 <div class="arch-year">{{ year.name }}</div>
@@ -38,4 +38,4 @@ order: 3
 </div>
 {%- endfor -%}
 {%- endfor -%}
-</div>
+</div></div>
