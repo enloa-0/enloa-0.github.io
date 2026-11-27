@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 아카이브
+title: Archives
 icon: fas fa-archive
 order: 3
 ---
@@ -15,8 +15,8 @@ order: 3
 .arch-date { flex: 0 0 3.2rem; text-align: right; color: var(--yellow, #ffd23f); font-size: 1.1rem; }
 .arch-posts { list-style: none; margin: 0; padding: 0; flex: 1; }
 .arch-posts li { padding: 0.1rem 0; }
-.arch-posts a { color: #fff; text-decoration: none; border-bottom: none !important; }
-.arch-posts a:hover { color: var(--sky, #2de2e6); }
+.arch-posts a { color: #fff !important; text-decoration: none !important; border-bottom: none !important; background: none !important; }
+.arch-posts a:hover { color: var(--sky, #2de2e6) !important; }
 </style>
 
 <div class="arch">
